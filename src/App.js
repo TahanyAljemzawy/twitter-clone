@@ -1,12 +1,15 @@
-
 import './App.css';
-import Sidebar from './components/Sidebar';
+import Feed from './components/feed/Feed';
+import Sidebar from './components/sidebar/Sidebar';
+import Widgets from './components/Widgets';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
  
        <Sidebar />
+       <Feed />
+       <Widgets />
     </div>
   );
 }

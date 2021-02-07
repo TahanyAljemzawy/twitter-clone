@@ -1,0 +1,32 @@
+.feed {
+    border-right: 1px solid var(--twitter-background);
+    flex: 0.4;/*sidebar = 0.3 + 0.4 => .7 + .3(Widgetside) => 1 flex :D Cleaver ha ? */
+    min-width: fit-content;
+    overflow-y: scroll;
+}
+/*the home component fixed header*/
+.feed__header {
+    position: sticky;/*to stay fixed on the top*/
+    top: 0;
+    background-color: white;
+    z-index: 2;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--twitter-background);
+    
+}
+
+.feed__header > h1 {
+    font-size: 20px;
+    font-weight: 800;
+  }
+/* ************** To solve the scroll bar problem from youtub************** */
+/* Hide scrollbar for Chrome, Safari and Opera */
+.feed::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .feed {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }

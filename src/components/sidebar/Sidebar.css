@@ -9,12 +9,12 @@
 
   .sidebar__twitterIcon {
     color: var(--twitter-color);
-    font-size: 30px !important;
+    font-size: 40px !important;
     cursor: pointer;
   }
   .sidebar__Icon {
     font-weight: 400;
-    font-size: 30px !important;
+    font-size: 40px !important;
     margin-left: 20px;
    
   }
@@ -29,7 +29,7 @@
     cursor: pointer;
     font-weight: 400;
     font-size: 30px !important;
-    padding-left: 10px;
+   
   }
   .sidebarOption:hover {
     background-color: #e8f5fe;
@@ -42,7 +42,7 @@
   .sidebarOption > h1 {
     font-weight: 700;
     font-size: 20px;
-    margin-left: 20px;
+   margin-left: 20px; 
 
   }
   
