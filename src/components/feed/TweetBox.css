@@ -1,13 +1,14 @@
  .tweet_box {
    display: flex;
     padding: 20px;
-    border-bottom: 10px solid var(--twitter-background); 
+   border-bottom: 10px solid var(--twitter-background);
+   
     flex-direction: column;
  }
 
  .tweet_form {
     display: flex;
-    margin-left: 20px;
+   
     flex: 1;
  }
 
@@ -30,13 +31,14 @@
   .logo_section {
     padding-left: 90px;
     flex: 1;
+   
  }
  .tweetBox_logos {
      font-size: 25px;
      color: var(--twitter-color);
      margin-left: 10px;
-     padding:5px;
      cursor: pointer;
+     margin-top: 10px;
  }
 
  .tweetBox_logos:hover {
