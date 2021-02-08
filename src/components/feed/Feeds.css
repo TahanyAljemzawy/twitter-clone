@@ -41,5 +41,7 @@
   @media (max-width: 414px) {
     .feed{
       flex:0.9;
+      border-right: none;
+
     }
   }

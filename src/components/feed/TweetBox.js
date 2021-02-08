@@ -9,24 +9,25 @@ function TweetBox() {
     return (
         <div className='tweet_box'>
             <form className='tweet_form'>
-            {/*smull circle photo Avatar */}
-            <Avatar src={img} className='avatar'/>
-            {/*input box to write tweet */}
-            <input className='tweet_input' type='text' placeholder="What's happening?" maxLength='280' />
-            
-          </form> 
+                {/*smull circle photo Avatar */}
+                <Avatar src={img} className='avatar'/>
+                {/*input box to write tweet */}
+                <input className='tweet_input' type='text' placeholder="What's happening?" maxLength='280' />
+                
+            </form> 
            {/*Upload img icon */}
-           <div className='logo_section'>
-          
-            <BiWorld  className='tweetBox_logos' />
-            <BiImage className='tweetBox_logos' />
-            <AiOutlineGif  className='tweetBox_logos' />
-            <BiPoll  className='tweetBox_logos' />
-            <BiHappyAlt  className='tweetBox_logos' />
-            {/*tweet button  */}
-            <Button className='tweet_btn'>Tweet</Button>
-            </div>
+           <div className='tweetBox_footer'>
+                <div className='logo_section'>
+            
+                    <BiWorld  className='tweetBox_logos' />
+                    <BiImage className='tweetBox_logos' />
+                    <AiOutlineGif  className='tweetBox_logos' />
+                    <BiPoll  className='tweetBox_logos' />
+                    <BiHappyAlt  className='tweetBox_logos' />
+                </div>
+            <Button className='tweet_btn'>Tweet</Button>     
         </div>
+    </div>
     )
 }
 
