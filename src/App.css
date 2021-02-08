@@ -1,15 +1,23 @@
 
 body {
-  --twitter-color: #50b7f5;
+  --twitter-color: #4eb5f5;
   --twitter-background: #e6ecf0;
-  --tweitter-border: #c7d5e2;
+  --twitter-border: #b5cadd;
 }
 
 .app {
   display: flex;
   height: 100vh;
-  max-width: 1300px;
+  max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 10px;
+
 }
+@media only screen and (max-width: 800px) {
+  .app {
+    padding: 0;
+  
+  }
+}
+

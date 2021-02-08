@@ -1,6 +1,5 @@
 .feed {
-    border-right: 1px solid var(--twitter-background);
-    flex: 0.4;/*sidebar = 0.3 + 0.4 => .7 + .3(Widgetside) => 1 flex :D Cleaver ha ? */
+    flex: 0.5;/*sidebar = 0.3 + 0.4 => .7 + .3(Widgetside) => 1 flex :D Cleaver ha ? */
     min-width: fit-content;
     overflow-y: scroll;
 }
@@ -11,7 +10,7 @@
     background-color: white;
     z-index: 2;
     padding: 15px 20px;
-    border-bottom: 1px solid var(--twitter-background);
+    border-bottom: 1px solid var(--twitter-border);
     
 }
 
@@ -29,4 +28,18 @@
   .feed {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+  }
+
+  @media only screen and (max-width: 768px) {
+    .feed {
+      flex: 0.9;
+      border-right: 1px solid var(--twitter-border);
+
+    }
+  }
+
+  @media (max-width: 414px) {
+    .feed{
+      flex:0.9;
+    }
   }

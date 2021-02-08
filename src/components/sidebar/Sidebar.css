@@ -1,7 +1,7 @@
 .sidebar {
-  border-right: 1px solid var(--tweitter-border);
-  flex: 0.3;
-  /* min-width: 250px; */
+  border-right: 1px solid var(--twitter-border);
+  flex: 0.2;
+ 
   margin-top: 10px;
   padding-left: 20px;
   padding-right: 20px;
@@ -10,15 +10,15 @@
 
   .sidebar__twitterIcon {
     color: var(--twitter-color);
-    font-size: 40px !important;
+    font-size: 25px !important;
     cursor: pointer;
-    margin-top: 20px;
-    padding-left: 20px;
+    
+   
   }
   .sidebar__Icon {
     font-weight: 100;
     font-size: 30px !important;
-    margin-left: 20px;
+    margin-left: 10px;
    
   }
 
@@ -32,6 +32,7 @@
     cursor: pointer;
     font-weight: 400;
     font-size: 30px !important;
+    padding-right: 20px;
    
   }
   .sidebarOption:hover {
@@ -39,6 +40,7 @@
     border-radius: 30px;
     color: var(--twitter-color);
     transition: color 200ms ease-out;
+    
   }
 
   
@@ -48,10 +50,33 @@
    margin-left: 20px; 
 
   }
+
+  @media only screen and (max-width: 1400px) {
+    .sidebar {
+      border-right: 1px solid var(--twitter-border);
+      flex: 0.2;
+      
+    }
+  
+    .sidebarOption > h1 {
+      display: none;
+  
+    }
+  
+    .sidebar__Icon {
+      font-weight: 100;
+      font-size: 30px !important;
+    
+     padding: 0;
+    }
+  
+    
+  }
   
   .sidebarOption > a:active {
     color: var(--twitter-color);
   }
+
 
  /************************* The tweet button  **************************/ 
 .sidebar__tweet {
@@ -63,4 +88,28 @@
   border-radius: 30px !important;
   height: 50px !important;
   margin-top: 20px !important;
+}
+
+@media (max-width: 768px) {
+  .sidebar__tweet {
+    display: none !important;
+   
+    }
+
+    .sidebar {
+      border-right: 1px solid var(--twitter-border);
+      flex: 0.1;
+     
+      margin-top: 10px;
+      padding-left: 0;
+      padding-right:0;
+      
+    }
+
+}
+
+@media (max-width: 414px) {
+  .sidebar{
+    display: none;
+  }
 }

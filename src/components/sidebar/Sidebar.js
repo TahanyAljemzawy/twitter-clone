@@ -6,9 +6,9 @@ import {SiTwitter} from 'react-icons/si'
 
 function Sidebar() {
     return (
-        <div  >
-            <SiTwitter className='sidebar__twitterIcon'/>
-            <ul className='sidebar'>
+        <div className='sidebar' >
+           
+            <ul >
                 {SidebarData.map((item, index)=>{
                     return(
                         <li key={index} className={item.cName}>
