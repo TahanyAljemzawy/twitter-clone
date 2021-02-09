@@ -13,6 +13,8 @@ function Profile() {
             <ProfileHeader />
             {/* Post */}
             <Post />
+            <Post />
+            <Post />
         </div>
     )
 }

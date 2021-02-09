@@ -30,7 +30,7 @@
     background-color: var(--twitter-background);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
     .widgets {
         display: none;
     }
