@@ -92,9 +92,15 @@
 
 @media (max-width: 768px) {
   .sidebar__tweet {
-    display: none !important;
-   
+    background-image: url(tweet.jpg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    
     }
+
+  .small_tweetBtn {
+    display: none;
+  }
 
     .sidebar {
       border-right: 1px solid var(--twitter-border);

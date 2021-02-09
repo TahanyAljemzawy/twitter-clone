@@ -21,7 +21,7 @@ function Sidebar() {
                 <li>
          {/*Tweet Button */}
                 <Button variant="outlined" className="sidebar__tweet" fullWidth>
-                       Tweet
+                    <span className='small_tweetBtn'> Tweet</span>  
                  </Button>
                 </li>
             </ul> 
