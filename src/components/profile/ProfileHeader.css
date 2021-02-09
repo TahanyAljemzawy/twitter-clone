@@ -1,33 +1,29 @@
 .header {
     display: flex;
     flex: 1;
-    align-items: flex-start;    
-    border-bottom: 1px solid var(--twitter-border);
-    padding-bottom: 10px;
-    flex-direction: column;
+    flex-direction: column;  
+    border-top: solid;
 }
-.header_img {
-    width:50vw;
-    height:35vh;
+
+.header_img {     
+    height:15rem;
     background-image: url('./cover.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-   
 
 }
 
 .header_userImg {
     display: flex;
-    align-items: center ;
-    
-    margin-left:10px; flex: 1;
+    align-items: center ;  
+    margin-right: 10px;
+    justify-content:space-between;
 }
 
 .userImg {
     border-radius: 50px;
     border:5px solid rgb(255, 255, 255);
-   justify-content: space-around;
     width: 9.5rem !important;
     height:9.5rem !important;
 }
@@ -41,6 +37,85 @@
     border-radius: 30px !important;
     height: 40px !important;
     padding: 5px 20px !important; 
+    position: relative !important;
+    top: 15px !important;
+    right: auto;
 }
 
+.header_info {
+    position: relative;
+    top: -70px;
+    padding-left: 20px; 
+}
+
+.header_info > h3 {
+    font-weight: 800;
+}
+
+div > h4, p {
+font-weight: 400;
+color: var(--twitter-header-info);
+margin-bottom:5px;
+margin-top: 0;
+}
+
+div > p{
+    color: black;
+}
+
+.header_filter{
+    display: flex;
+    justify-content:space-between;
+    margin-bottom:0px;
+ }
+
+.header_filter > h4 {
+    font-weight: 800;
+    margin-top: 20px;  
+    margin-right: 20px;
+    padding: 10px 20px;
+}
+
+.header_filter > h4:hover {
+    background-color: #e8f5fe;
+    color: var(--twitter-color);
+    transition: color 200ms ease-out;
+    cursor: pointer;
+    
+}
+
+.header_filter > h4:active {
+    border-bottom: 5px solid var(--twitter-color);
+}
+
+.followers  {
+    display: flex;  
+   
+}
+.followers > h4 {
+     padding-right: 20px;  
+}
+
+/*****************************************************/
+@media (max-width: 768px) {
+    .header {
+        border-right:1px solid var(--twitter-border);
+    }    
+.header_filter > h4 {  
+    padding: 10px 20px;
+}
+}
+
+@media (max-width: 414px) {
+    .header{
+        border: none;
+    }
+    .header_filter > h4 {
+        font-weight: 800;
+        margin-top: 20px;  
+        margin-right: 0px;
+        margin-left: 0px;
+        padding:5px 10px;
+    }
+}
 

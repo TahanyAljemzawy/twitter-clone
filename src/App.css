@@ -3,6 +3,9 @@ body {
   --twitter-color: #4eb5f5;
   --twitter-background: #e6ecf0;
   --twitter-border: #b5cadd;
+  --twitter-header-info: #797f85;
+
+  margin:0px;
 }
 
 .app {
@@ -14,10 +17,3 @@ body {
   padding: 0 10px;
 
 }
-@media only screen and (max-width: 800px) {
-  .app {
-    padding: 0;
-  
-  }
-}
-

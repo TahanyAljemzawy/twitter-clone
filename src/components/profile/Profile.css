@@ -27,4 +27,25 @@
 .profile__title > h1 {
     font-size: 20px;
     font-weight: 800;
-}  
+} 
+
+/*********************************************************/
+@media (max-width: 768px) {
+
+  .profile__title{
+      border-right:1px solid var(--twitter-border);
+  }
+  .profile {
+    flex:0.8
+  }
+}
+
+@media (max-width: 414px) {
+  .profile {
+    flex:1;
+  }
+  .profile__title{
+    border-right: none;
+  }
+}
+

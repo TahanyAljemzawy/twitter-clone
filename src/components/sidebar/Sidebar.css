@@ -1,7 +1,6 @@
 .sidebar {
   border-right: 1px solid var(--twitter-border);
-  flex: 0.2;
- 
+  flex: 0.2; 
   margin-top: 10px;
   padding-left: 20px;
   padding-right: 20px;
@@ -65,13 +64,25 @@
   
     .sidebar__Icon {
       font-weight: 100;
-      font-size: 30px !important;
-    
-     padding: 0;
+      font-size: 30px !important;    
+      padding: 0;
+    }
+
+    .sidebar__tweet {
+      background-image: url(logo.png) !important;
+      background-size: 50px;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-top: 10px !important;
+      border-radius: 50px !important;     
+    }
+  
+    .small_tweetBtn {
+      display: none;
     }
   
     
-  }
+  }*/
   
   .sidebarOption > a:active {
     color: var(--twitter-color);
@@ -92,28 +103,27 @@
 
 @media (max-width: 768px) {
   .sidebar__tweet {
-    background-image: url(tweet.jpg) !important;
+    background-image: url(logo.png) !important;
     background-repeat: no-repeat;
     background-position: center;
-    
+    margin-top: 10px !important;
+    border-radius: 50px !important;
+    height: 60px !important;
     }
 
   .small_tweetBtn {
     display: none;
   }
-
     .sidebar {
       border-right: 1px solid var(--twitter-border);
-      flex: 0.1;
-     
+      flex: 0.1;     
       margin-top: 10px;
       padding-left: 0;
-      padding-right:0;
+      padding-right:8px;
       
     }
 
 }
-
 @media (max-width: 414px) {
   .sidebar{
     display: none;

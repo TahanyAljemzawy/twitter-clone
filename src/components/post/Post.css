@@ -1,9 +1,10 @@
 .post {
     display: flex;
     align-items: flex-start;
-    
+    padding-right: 5px;
     border-top: 1px solid var(--twitter-border);
     padding-bottom: 10px;
+    
 }
 
 .post:hover {
@@ -44,3 +45,16 @@
     color: var(--twitter-color);
     transition: color 200ms ease-out;
   }
+
+/********************************************************/
+  @media (max-width: 768px) {
+    .post {
+        border-right:1px solid var(--twitter-border);
+
+    }
+}
+@media (max-width: 414px) {
+    .post{
+        border-right: none;
+    }
+}
