@@ -7,7 +7,7 @@
   
 }
 
-  .sidebar__twitterIcon {
+  .sidebar__twitterIcon  {
     color: var(--twitter-color);
     font-size: 25px !important;
     cursor: pointer;
@@ -32,7 +32,8 @@
     font-weight: 400;
     font-size: 30px !important;
     padding-right: 20px;
-   
+    color: black;
+    text-decoration: none;
   }
   .sidebarOption:hover {
     background-color: #e8f5fe;
@@ -43,11 +44,15 @@
   }
 
   
-  .sidebarOption > h1 {
+  .sidebarOption > h1{
     font-weight: 700;
     font-size: 20px;
    margin-left: 20px; 
 
+  }
+
+  .sidebarOption > a:active {
+    color: var(--twitter-color);
   }
 
   @media only screen and (max-width: 1400px) {

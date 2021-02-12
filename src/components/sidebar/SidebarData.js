@@ -8,13 +8,13 @@ export const SidebarData = [
     {
         icon :<SiTwitter/>,
         title:'',
-        path :'',
+        path :'/',
         cName:'sidebar__twitterIcon',
     },    
     {
         icon :<BiHomeCircle />,
         title:'Home',
-        path :'',
+        path :'/',
         cName:'sidebarOption',
     },
     {
@@ -49,8 +49,8 @@ export const SidebarData = [
     },
     {
         icon :<IoMdPerson />,
-        title:'Prifile',
-        path :'',
+        title:'Profile',
+        path :'/profile',
         cName:'sidebarOption',
     },
     {
