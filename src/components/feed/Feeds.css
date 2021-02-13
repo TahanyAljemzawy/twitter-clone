@@ -1,6 +1,6 @@
 .feed {
     flex: 0.5;/*sidebar = 0.3 + 0.4 => .7 + .3(Widgetside) => 1 flex :D Cleaver ha ? */
-    min-width: fit-content;
+    
     overflow-y: scroll;
 }
 /*the home component fixed header*/

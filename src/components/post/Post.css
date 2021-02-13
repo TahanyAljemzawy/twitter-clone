@@ -1,6 +1,7 @@
 .post {
     display: flex;
     align-items: flex-start;
+    flex: 0.5;
     padding-right: 5px;
     border-top: 1px solid var(--twitter-border);
     padding-bottom: 10px;
