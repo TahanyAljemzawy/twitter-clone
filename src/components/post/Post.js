@@ -7,23 +7,25 @@ import { GrFavorite } from 'react-icons/gr'
 import { IoChatbubbleOutline } from 'react-icons/io5'
 
 /* Post will take the values as parameters */
-function Post({ userName, verified, text, person_img }) {
+function Post({ userName, avatar,verified, post_text, post_img }) {
     return (
         <div className='post'>
             <div className='post_avatar'>
-            <Avatar src={img} className='avatar'/>
+            <Avatar src={avatar} className='avatar'/>
             </div>
             <div className='post_body'>
             {/* post header contains:  name timestamp verified Icon Optional */}
                 <div className='post_header'>
-                    <h3>Tahany Momo {'  '}
-                        <span><MdVerifiedUser style={{fontSize:'20px', color:'#50b7f5' }} /></span>
+                    <h3>{userName} {'  '}
+                        <span>
+                        {verified && <MdVerifiedUser style={{fontSize:'20px', color:'#50b7f5' }} />}   
+                        </span>
                     </h3>
                 </div>
                 <div className= 'post_text'>
-                    <p>hallo my name is tahany and this is my first tweet</p>
+                    <p>{post_text}</p>
                 </div>
-                    <img src={img} alt='post_img' />
+                    <img src={post_img} alt='post_img' />
                 <div className= 'post_footer'>
                     <IoChatbubbleOutline className= 'post_icons' />
                     <MdRepeat className= 'post_icons' />
