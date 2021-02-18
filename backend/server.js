@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 require('dotenv').config();
+const authRoutes = require('./routes/userAuth')
 
 const app = express();
 
@@ -13,7 +14,10 @@ app.use(cors());
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 
-const dbURI = 'mongodb+srv://tahany:toto_123@cluster0.8w0ew.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+app.use('/api',authRoutes);
+
+
+const dbURI =process.env.DATABASE ;
 //connect to database
 mongoose.connect(dbURI, {
     useNewUrlParser: true,
