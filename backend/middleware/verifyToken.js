@@ -6,8 +6,9 @@ const User = mongoose.model('User')
 //he don't have theToken 
 //next === callback function 
 module.exports = function(req,res,next){
+    //authorization = Bearer kjgkjgjkgkjgkjgkjg
     const {authorization} = req.headers;
-    console.log(authorization);
+   // console.log(authorization);
 
     if(!authorization)
         return res.status(401).json({errore:"you must login first"});
@@ -17,10 +18,11 @@ module.exports = function(req,res,next){
     jwt.verify(token, process.env.SECRET_TOKEN,(err, playload)=>{
        if(err)
         return res.status(401).json({errore:"you myst login first"});
-
-        const {_id} = playload;
-        User.findById(_id).then(userData=>{
+     //   console.log(playload);
+        const {retrevdUser} = playload;
+        User.findById(retrevdUser).then(userData=>{
             req.user = userData
+          //  console.log(userData);
             next();
         })
     });

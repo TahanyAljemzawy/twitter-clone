@@ -1,18 +1,9 @@
 const mongoose = require('mongoose');
 
-const {ObjectId} = mongoose.Schema
+const {ObjectId} = mongoose.Schema.Types//to build relation
 
 const postSchema = new mongoose.Schema({
-    userId: {
-        type: Number,
-        trim: true,
-        required: true
-    },
-    avatar: {
-        type: String,
-        trim: true,
-        required: true
-    },
+
     post_text: {
         type: String,
         trim: true,
@@ -23,8 +14,9 @@ const postSchema = new mongoose.Schema({
         trim: true,
         required: true
     },
-    userName : {
-        type:String
+    postedBy : {
+        type: ObjectId,
+        ref: 'User'
     },
     tags: [],
     likeCount : {

@@ -10,9 +10,6 @@ import axios from 'axios'
 function TweetBox({ avatar, userId, userName }) {
 
     const [postData, setpostData] = useState({
-        userId:'123',
-        userName:'kkkk',
-        avatar:'kkkkkk',
         post_text:'',
         post_img:'',
         globalState:'',

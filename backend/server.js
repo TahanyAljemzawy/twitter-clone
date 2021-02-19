@@ -24,6 +24,9 @@ mongoose.connect(dbURI, {
 .then(()=> console.log('DB connected'))
 .catch(err=> console.log(err));
 
+require('./DBmodels/Post')
+require('./DBmodels/User')
+
 //middleware
 app.use(cors());
 app.use(morgan('dev'));
