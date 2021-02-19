@@ -11,7 +11,7 @@ const JWT = require('jsonwebtoken');
 //the user model schema
 const { schema } = require('../DBmodels/User');
 require('dotenv').config()
-
+const verifyToken = require('../middleware/verifyToken')
 /******************************************/
 
 //the validation schema using joi :)
@@ -57,6 +57,10 @@ const querySchema = Joi.object({
     }
   })
 
+  router.get('/test',verifyToken, (req, res)=>{
+    res.json('it works')
+  })
+  
   router.post('/signin',async(req, res)=> {
     try {
         const { email, password } = req.body;
@@ -82,7 +86,7 @@ const querySchema = Joi.object({
     }
 })
 
-  module.exports = router;
+module.exports = router;
 
 
 

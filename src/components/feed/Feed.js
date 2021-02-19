@@ -4,6 +4,13 @@ import './Feeds.css'
 import TweetBox from './TweetBox'
 import db from '../../backend/firebase'
 function Feed() {
+    const [userId, setUserId] = useState('');
+    const [avatar, setAvatar] = useState('');
+    const [userName, setuserName] = useState('')
+
+
+
+
     const [posts, setPosts]=useState([]); // to set the new post
     //load the posts from the db
     useEffect(()=>{
@@ -20,7 +27,7 @@ function Feed() {
             </div>
             {/*the tweet box which contains tweet button */}
             <div>
-                <TweetBox />
+                <TweetBox avatar = {avatar} userId = {userId} userName = {userName}/>
             </div>
 
             {/* Tahany you need to add id for each post wich wiil link the post with the owner and the post wil have it's own id */}

@@ -104,6 +104,11 @@
   border-radius: 30px !important;
   height: 50px !important;
   margin-top: 20px !important;
+  background-image: none !important;
+}
+.small_tweetBtn {
+  display:block;
+ 
 }
 
 @media (max-width: 1000px) {
@@ -121,7 +126,7 @@
   }
     .sidebar {
       border-right: 1px solid var(--twitter-border);
-      flex: 0.2;     
+      flex: 0.1;     
       margin-top: 10px;
       padding-left: 0;
       padding-right:8px;

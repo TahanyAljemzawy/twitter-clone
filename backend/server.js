@@ -5,16 +5,11 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 require('dotenv').config();
 const authRoutes = require('./routes/userAuth')
-
+const postRoutes = require('./routes/post')
 const app = express();
 
 app.use(express.json())
-//middleware
-app.use(cors());
-app.use(morgan('dev'));
-app.use(bodyParser.json());
 
-app.use('/api',authRoutes);
 
 
 const dbURI =process.env.DATABASE ;
@@ -29,5 +24,15 @@ mongoose.connect(dbURI, {
 .then(()=> console.log('DB connected'))
 .catch(err=> console.log(err));
 
-  const port = process.env.PORT || 8000
+//middleware
+app.use(cors());
+app.use(morgan('dev'));
+app.use(bodyParser.json());
+
+//routes
+app.use('/api',authRoutes);
+app.use('/posts',postRoutes);
+
+const port = process.env.PORT || 8000
 app.listen(port, () => console.log(`Server is running on port ${port}`));
+
