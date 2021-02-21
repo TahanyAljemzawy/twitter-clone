@@ -4,19 +4,22 @@ import { Button, FormLabel, Input } from '@material-ui/core'
 import './SignIn.css'
 import { SiTwitter } from 'react-icons/si';
 import axios from 'axios';
+import { useHistory } from "react-router-dom";
 
 /******************************************* */
+
 function SignUp() {
+    const history = useHistory()
     const [userData, setuserData] = useState({
         name:'',
         email:'',
         password:'',
         passwordAgain:'',
-        avatarImg:'',
-        coverImg:'',
+      //  avatarImg:'',
+      //  coverImg:'',
         pio: '',
     })
-
+    
     const [err , setErr] = useState()
 
     const reset = ()=>{
@@ -29,6 +32,7 @@ function SignUp() {
         try {
             let result = await axios.post('http://localhost:8000/api/register',userData)
             console.log(result);
+            history.push('/signin')
             reset()
         } catch (error) {
             setErr(error.response.data.msg)
@@ -46,25 +50,7 @@ function SignUp() {
             <Input type='text' className='input-field' required placeholder='Verify Password' onChange={(e)=>setuserData({...userData, passwordAgain:e.target.value})}/>
             <Input type='text' className='input-field' required placeholder='pio' onChange={(e)=>setuserData({...userData, pio:e.target.value})}/>
 
-        
-        <div className='Imges-input'>
-            <FormLabel>Profile Img </FormLabel>
-            <FileBase 
-                type= 'file'
-                multiple= {false}
-                onDone={({base64})=>setuserData({...userData, avatarImg:base64})}
-                className='signin-btn'
-            />
-        </div>
-        <div className='Imges-input'>
-            <FormLabel>Cover Img </FormLabel>
-            <FileBase 
-                type= 'file'
-                multiple= {false}
-                onDone={({base64})=>setuserData({...userData, coverImg:base64})}
-                className='signin-btn'
-            />  
-        </div>
+      
             <Button type='submit' className='signin-btn' onClick={submitHandeler}> Sign up</Button>
        
      </div>

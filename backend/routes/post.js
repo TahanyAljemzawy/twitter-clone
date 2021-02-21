@@ -27,7 +27,7 @@ router.get('/profilePosts',verifyToken , async (req, res)=>{
     })
 })
 
-router.post('/newpost',verifyToken, async (req, res)=>{
+router.post('/newpost', async (req, res)=>{
     let { post_text, post_img, globalState } = req.body;
   console.log(req.body);
   const newPost = new Post({

@@ -30,8 +30,8 @@ require('./DBmodels/User')
 //middleware
 app.use(cors());
 app.use(morgan('dev'));
-app.use(bodyParser.json({limit: "50mb",  extended: true}));
-app.use(bodyParser.urlencoded({limit: "50mb", extended: true}));
+app.use(bodyParser.json({limit: "100mb",  extended: true}));
+app.use(bodyParser.urlencoded({limit: "100mb", extended: true}));
 
 //routes
 app.use('/api',authRoutes);

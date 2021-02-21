@@ -20,7 +20,9 @@ module.exports = function(req,res,next){
         return res.status(401).json({errore:"you myst login first"});
      //   console.log(playload);
         const {retrevdUser} = playload;
-        User.findById(retrevdUser).then(userData=>{
+        User.findById(retrevdUser)
+        .populate('postedBy','_id name createdAt avatarImg')
+        .then(userData=>{
             req.user = userData
           //  console.log(userData);
             next();

@@ -54,6 +54,11 @@
    
 
  }
+
+ .tweetBox_footer > input {
+    width: 10px;
+    
+ }
  /************************* The tweet button  **************************/ 
  .tweet_btn {
     background-color: var(--twitter-color) !important;
