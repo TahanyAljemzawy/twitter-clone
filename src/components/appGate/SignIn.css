@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&family=Mukta:wght@600;700&display=swap');
+
+.card {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex:0.8;    
+    margin: auto;
+    margin-top: 0;
+ }
+ 
+ /* label color */
+ .input-field {
+    width: 40vw;
+    height: 8vh;
+    margin: 10px;
+    border: 2px solid var(--twitter-background);
+    padding-left: 10px;
+    border-radius: 10px !important;
+  
+
+  }
+  /* label focus color */
+  .input-field:hover {
+    border-color: var(--twitter-color)!important;
+  } 
+
+ .input-field:focus-within {
+    
+    border: 3px solid var(--twitter-color)!important;
+
+  }
+
+  .card > h1 {
+    font-family: 'Mukta', sans-serif;  
+    font-weight:800 !important;
+    width: 40vw;
+
+  }
+
+  .card > p {
+      color: rgb(207, 24, 24);
+      font-size: 1.2rem;
+      width: 40vw;
+  }
+  .signin-btn {
+    background-color: var(--twitter-color) !important;
+    width: 40vw;
+    border: none !important;
+    color: white !important;
+    font-weight: 900 !important;
+    text-transform: inherit !important;
+    border-radius: 30px !important;
+    height: 50px !important;
+    margin-top: 20px !important;
+    background-image: none !important;
+  }
+
+.Imges-input {
+    margin: 10px;
+}
+
+.Imges-input > label {
+    margin-right: 15px;
+}
+  
+  .twitter-Icon {
+    font-weight: 100;
+    font-size: 50px !important;    
+    padding: 0;
+    color: var(--twitter-color);
+    
+    margin-bottom: 20px;
+  }
+
+

@@ -21,12 +21,14 @@ const querySchema = Joi.object({
     email        : Joi.string().required().lowercase().email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }),
     password     : Joi.string().min(8).required(),
     passwordAgain: Joi.ref('password'),//to equal password
-
+    avatarImg    : Joi.string(),
+    coverImg     : Joi.string(),
+    pio          : Joi.required(),
   })
 
   router.post('/register', async(req, res)=> {
     //take the values from the req
-    const { name, email, password, passwordAgain } = req.body;
+    const { name, email, password, passwordAgain, avatarImg, coverImg, pio } = req.body;
     console.log(req.body);
     //check if the email is not alredy exist at the db
     const doesExist = await User.findOne({ email })
@@ -47,6 +49,9 @@ const querySchema = Joi.object({
       name         : name,
       email        : email,
       password     : hashedPassword,
+      avatarImg    : avatarImg,
+      coverImg     : coverImg,
+      pio          : pio,
     })
     //store it at the database
     try {

@@ -19,12 +19,19 @@ const userSchema = new mongoose.Schema({
         required: true
     },
    
-    avatar: {
+    avatarImg: {
+        type: String,  
+        required: false      
+    },
+    coverImg: {
+        type: String,  
+        required: false  
+    },
+    pio: {
         type: String,
         trim: true,
         
     },
-
 }, {timestamps: true});
 
 module.exports =mongoose.model('User', userSchema);
