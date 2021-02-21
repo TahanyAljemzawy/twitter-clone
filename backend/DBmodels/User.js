@@ -25,7 +25,7 @@ const userSchema = new mongoose.Schema({
     },
     coverImg: {
         type: String,  
-        required: false  
+       
     },
     pio: {
         type: String,

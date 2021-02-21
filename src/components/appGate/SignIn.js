@@ -15,6 +15,8 @@ function SignIn() {
         try {
             let result = await axios.post('http://localhost:8000/api/signin',{ email ,password })
             console.log(result);
+            localStorage.setItem('token',result.data.token)
+
         } catch (error) {
             setErr(error.response.data.msg)
         }

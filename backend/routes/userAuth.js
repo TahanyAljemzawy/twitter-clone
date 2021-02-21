@@ -56,9 +56,9 @@ const querySchema = Joi.object({
     //store it at the database
     try {
       const savedUser = await user.save();//if there is no error save the user at db
-      res.json(savedUser);//go to signin
+      res.status(200).json(savedUser);//go to signin
     } catch (error) {
-      res.status(500).send(error);
+      res.status(500).json({err : error.message})
     }
   })
 
