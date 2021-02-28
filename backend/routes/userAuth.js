@@ -73,6 +73,7 @@ const querySchema = Joi.object({
 
         //3-find the user email at the db by email since it is uonic and it will return boolean so..
         const retrevdUser = await User.findOne({ email:email }) ;
+        console.log(retrevdUser);
         if( !retrevdUser ){
         return res.status(402).json({msg:"Sorry you don't have acount on the webpage please login... 3eeeb 3aleek"})     
         }
@@ -81,9 +82,10 @@ const querySchema = Joi.object({
         const comparePass = await bcrypt.compare( password, retrevdUser.password )
         if( !comparePass )
         return res.status(403).json({msg:"Invalid Credentials, 3eeeeb 3aleeek U_U "})
+        
         const token = JWT.sign({ retrevdUser : retrevdUser._id }, process.env.SECRET_TOKEN)
         res.header('theToken',token);// put the token in the header so we send it 
-        res.status(200).json({ token, retrevdUser :{id:retrevdUser._id , name: retrevdUser.name} }) //send the token to the local storge
+        res.status(200).json({ token, retrevdUser}) //send the token to the local storge
         } catch (error) {
         return res.status(500).json({err : error.message})
     }

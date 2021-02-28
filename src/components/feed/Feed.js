@@ -3,22 +3,28 @@ import Post from '../post/Post'
 import './Feeds.css'
 import TweetBox from './TweetBox'
 import db from '../../backend/firebase'
+import axios from 'axios'
 function Feed() {
     const [userId, setUserId] = useState('');
     const [avatar, setAvatar] = useState('');
     const [userName, setuserName] = useState('')
-
-
-
-
     const [posts, setPosts]=useState([]); // to set the new post
     //load the posts from the db
-    useEffect(()=>{
-        db.collection('posts').onSnapshot(snapshot =>(
-            setPosts(snapshot.docs.map(doc => doc.data() ))
-        ))
+    useEffect( async ()=>{
+        try {
+            let result = await axios.get('http://localhost:8000/posts/allpost',  
+            { headers: {
+                authorization: 'Bearer ' + localStorage.getItem('token')
+            }})
+            setPosts(result.data)
+            console.log(posts);
+           // localStorage.setItem('token',result.data.token)
+
+        } catch (error) {
+            console.log(error.data.msg)
+        } 
     },[])
-    console.log(posts)
+  console.log(posts)
     return (
         <div className='feed'>
             {/*the fix Header contains Home*/}
@@ -34,11 +40,14 @@ function Feed() {
             {posts.map(post=>{
                 return (
                     <Post
+                    key = {post._id}
                     userName = {post.userName}
                     avatar = {post.avatar}
                     verified = {post.verified}
                     post_text= {post.post_text}
                     post_img = {post.post_img}
+                    postedBy = {post.postedBy}
+                    createdAt = {post.createdAt}
                     />
                
                 )

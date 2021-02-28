@@ -8,7 +8,7 @@ const User = mongoose.model('User')
 module.exports = function(req,res,next){
     //authorization = Bearer kjgkjgjkgkjgkjgkjg
     const {authorization} = req.headers;
-   // console.log(authorization);
+  console.log(authorization);
 
     if(!authorization)
         return res.status(401).json({errore:"you must login first"});

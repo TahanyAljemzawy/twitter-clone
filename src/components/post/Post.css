@@ -13,6 +13,12 @@
     cursor: pointer;
 }
 
+.post_text {
+    padding: 5px;
+  
+    margin: 5px 0;
+}
+
 .post_body > img {
     border-radius: 30px;
     width: 100%;
@@ -51,7 +57,7 @@
   @media (max-width: 768px) {
     .post {
         border-right:1px solid var(--twitter-border);
-
+        
     }
 }
 @media (max-width: 414px) {

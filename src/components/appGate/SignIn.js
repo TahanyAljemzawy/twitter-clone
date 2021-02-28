@@ -3,9 +3,10 @@ import React, { useState } from 'react'
 import axios from 'axios';
 import './SignIn.css'
 import { SiTwitter } from 'react-icons/si';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 /************************************************************ */
 function SignIn() {
+    const history = useHistory();
     const [email, setemail] = useState()
     const [password, setpassword] = useState()
     const [err , setErr] = useState()
@@ -15,7 +16,10 @@ function SignIn() {
         try {
             let result = await axios.post('http://localhost:8000/api/signin',{ email ,password })
             console.log(result);
+            console.log(result.data.retrevdUser);
             localStorage.setItem('token',result.data.token)
+            localStorage.setItem('user', JSON.stringify(result.data.retrevdUser))
+            history.push('/profile')
 
         } catch (error) {
             setErr(error.response.data.msg)

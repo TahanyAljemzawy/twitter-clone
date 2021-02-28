@@ -30,19 +30,28 @@ function TweetBox({ avatar, userId, userName }) {
             .then(data=>{
                 setpostData({...postData, post_img:data.url})
                 console.log(postData.post_img);
+                sendData();
             })
             .catch(err=>{
                 console.log(err)
             })
+         
+         
+        }
+
+        const sendData = async ()=>{
             try {
-                let result = await axios.post('http://localhost:8000/posts/newpost',postData)
+                let result = await axios.post('http://localhost:8000/posts/newpost',postData,  
+                { headers: {
+                    authorization: 'Bearer ' + localStorage.getItem('token')
+                }})
+
                 console.log(result);
                // localStorage.setItem('token',result.data.token)
     
             } catch (error) {
                 console.log(error.response.data.msg)
-            }    
-         
+            }  
         }
     return (
         <div className='tweet_box'>
