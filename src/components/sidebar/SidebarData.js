@@ -4,13 +4,14 @@ import { BiHomeCircle, BiBell, BiBookmark, BiDetail, BiEnvelope, BiHash } from '
 import {CgMoreO} from 'react-icons/cg'
 import {SiTwitter} from 'react-icons/si'
 /************************************* */
+
 export const SidebarData = [
     {
         icon :<SiTwitter/>,
         title:'',
         path :'/',
         cName:'sidebar__twitterIcon',
-    },    
+    },
     {
         icon :<BiHomeCircle />,
         title:'Home',

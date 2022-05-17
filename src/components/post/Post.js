@@ -7,7 +7,7 @@ import { GrFavorite } from 'react-icons/gr'
 import { IoChatbubbleOutline } from 'react-icons/io5'
 
 /* Post will take the values as parameters */
-function Post({ userName, avatar,verified, post_text, post_img, postedBy, createdAt }) {
+function Post({ userName, avatar,verified, post_text, post_img, postedBy='', createdAt='' }) {
 
     console.log(postedBy);
     console.log(createdAt);
@@ -23,7 +23,7 @@ function Post({ userName, avatar,verified, post_text, post_img, postedBy, create
                     <h3>{postedBy.name} {'  '}
                     <p>{createdAt}</p>
                         <span>
-                        {verified && <MdVerifiedUser style={{fontSize:'20px', color:'#50b7f5' }} />}   
+                        {verified && <MdVerifiedUser style={{fontSize:'20px', color:'#50b7f5' }} />}
                         </span>
                     </h3>
                 </div>
@@ -31,16 +31,16 @@ function Post({ userName, avatar,verified, post_text, post_img, postedBy, create
                     <p>{post_text}</p>
                 </div>
                 {
-                    post_img ? 
+                    post_img ?
                     <>
-                    <img src={post_img} alt='post_img' /> 
+                    <img src={post_img} alt='post_img' />
                      <div className= 'post_footer'>
                         <IoChatbubbleOutline className= 'post_icons' />
                         <MdRepeat className= 'post_icons' />
                         <GrFavorite className= 'post_icons' />
                         <MdOpenInBrowser className= 'post_icons' />
                      </div>
-                    </>  : 
+                    </>  :
                   <div className= 'post_footer'>
                   <IoChatbubbleOutline className= 'post_icons' />
                   <MdRepeat className= 'post_icons' />
@@ -48,9 +48,9 @@ function Post({ userName, avatar,verified, post_text, post_img, postedBy, create
                   <MdOpenInBrowser className= 'post_icons' />
               </div>
                 }
-               
-                    
-               
+
+
+
             </div>
         </div>
     )

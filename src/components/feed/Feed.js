@@ -4,6 +4,7 @@ import './Feeds.css'
 import TweetBox from './TweetBox'
 import db from '../../backend/firebase'
 import axios from 'axios'
+import Layout from '../layout/layout'
 function Feed() {
     const [userId, setUserId] = useState('');
     const [avatar, setAvatar] = useState('');
@@ -12,7 +13,7 @@ function Feed() {
     //load the posts from the db
     useEffect( async ()=>{
         try {
-            let result = await axios.get('http://localhost:8000/posts/allpost',  
+            let result = await axios.get('http://localhost:8000/posts/allpost',
             { headers: {
                 authorization: 'Bearer ' + localStorage.getItem('token')
             }})
@@ -21,11 +22,12 @@ function Feed() {
            // localStorage.setItem('token',result.data.token)
 
         } catch (error) {
-            console.log(error.data.msg)
-        } 
+            console.log(error.data)
+        }
     },[])
   console.log(posts)
     return (
+        <Layout>
         <div className='feed'>
             {/*the fix Header contains Home*/}
             <div className='feed__header'>
@@ -49,10 +51,11 @@ function Feed() {
                     postedBy = {post.postedBy}
                     createdAt = {post.createdAt}
                     />
-               
+
                 )
             })}
-        </div>  
+        </div>
+        </Layout>
     )
 }
 

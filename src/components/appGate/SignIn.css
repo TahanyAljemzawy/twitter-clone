@@ -6,11 +6,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex:0.8;    
+    flex:0.8;
     margin: auto;
     margin-top: 0;
  }
- 
+
  /* label color */
  .input-field {
     width: 40vw;
@@ -19,22 +19,21 @@
     border: 2px solid var(--twitter-background);
     padding-left: 10px;
     border-radius: 10px !important;
-  
+
 
   }
   /* label focus color */
   .input-field:hover {
     border-color: var(--twitter-color)!important;
-  } 
+  }
 
- .input-field:focus-within {
-    
-    border: 3px solid var(--twitter-color)!important;
+ .input-field:focus {
+    border: 3px solid var(--twitter-color);
 
   }
 
   .card > h1 {
-    font-family: 'Mukta', sans-serif;  
+    font-family: 'Mukta', sans-serif;
     font-weight:800 !important;
     width: 40vw;
 
@@ -65,13 +64,13 @@
 .Imges-input > label {
     margin-right: 15px;
 }
-  
+
   .twitter-Icon {
     font-weight: 100;
-    font-size: 50px !important;    
+    font-size: 50px !important;
     padding: 0;
     color: var(--twitter-color);
-    
+
     margin-bottom: 20px;
   }
 

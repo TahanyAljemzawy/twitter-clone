@@ -1,29 +1,29 @@
 .sidebar {
   border-right: 1px solid var(--twitter-border);
-  flex: 0.2; 
+  flex: 0.2;
   margin-top: 10px;
   padding-left: 20px;
   padding-right: 20px;
-  
+
 }
 
   .sidebar__twitterIcon  {
     color: var(--twitter-color);
     font-size: 25px !important;
     cursor: pointer;
-    
-   
+
+
   }
   .sidebar__Icon {
     font-weight: 100;
     font-size: 30px !important;
     margin-left: 10px;
-   
+
   }
 
   ul {
       list-style: none;
-      
+
   }
   .sidebarOption {
     display: flex;
@@ -40,15 +40,15 @@
     border-radius: 30px;
     color: var(--twitter-color);
     transition: color 200ms ease-out;
-    
+
   }
 
-  
+
   .sidebarOption > h1{
     font-weight: 700;
     font-size: 20px;
-   margin-left: 20px; 
-
+   margin-left: 20px;
+color: #000;
   }
 
   .sidebarOption > a:active {
@@ -59,17 +59,12 @@
     .sidebar {
       border-right: 1px solid var(--twitter-border);
       flex: 0.2;
-      
+
     }
-  
-    .sidebarOption > h1 {
-      display: none;
-  
-    }
-  
+
     .sidebar__Icon {
       font-weight: 100;
-      font-size: 30px !important;    
+      font-size: 30px !important;
       padding: 0;
     }
 
@@ -79,22 +74,22 @@
       background-repeat: no-repeat;
       background-position: center;
       margin-top: 10px !important;
-      border-radius: 50px !important;     
+      border-radius: 50px !important;
     }
-  
+
     .small_tweetBtn {
       display: none;
     }
-  
-    
+
+
   }*/
-  
+
   .sidebarOption > a:active {
     color: var(--twitter-color);
   }
 
 
- /************************* The tweet button  **************************/ 
+ /************************* The tweet button  **************************/
 .sidebar__tweet {
   background-color: var(--twitter-color) !important;
   border: none !important;
@@ -108,12 +103,11 @@
 }
 .small_tweetBtn {
   display:block;
- 
+
 }
 
 @media (max-width: 1000px) {
   .sidebar__tweet {
-    background-image: url(logo.png) !important;
     background-repeat: no-repeat;
     background-position: center;
     margin-top: 10px !important;
@@ -126,11 +120,11 @@
   }
     .sidebar {
       border-right: 1px solid var(--twitter-border);
-      flex: 0.1;     
+      flex: 0.1;
       margin-top: 10px;
       padding-left: 0;
       padding-right:8px;
-      
+
     }
 
 }

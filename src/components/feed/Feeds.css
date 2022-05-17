@@ -1,6 +1,6 @@
 .feed {
     flex: 0.5;/*sidebar = 0.3 + 0.4 => .7 + .3(Widgetside) => 1 flex :D Cleaver ha ? */
-    
+
     overflow-y: scroll;
 }
 /*the home component fixed header*/
@@ -11,7 +11,7 @@
     z-index: 2;
     padding: 15px 20px;
     border-bottom: 1px solid var(--twitter-border);
-    
+
 }
 
 .feed__header > h1 {
@@ -23,7 +23,7 @@
 .feed::-webkit-scrollbar {
     display: none;
   }
-  
+
   /* Hide scrollbar for IE, Edge and Firefox */
   .feed {
     -ms-overflow-style: none; /* IE and Edge */
@@ -33,7 +33,7 @@
   @media only screen and (max-width: 1000px) {
     .feed {
       flex: 0.9;
-      
+
 
     }
   }
