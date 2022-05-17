@@ -1,6 +1,5 @@
 .widgets {
     flex: 0.3;
-    border-left: 1px solid var(--twitter-border);
     min-width: fit-content;
     padding-left: 10px;
     padding-top: 10px;
@@ -30,7 +29,7 @@
     background-color: var(--twitter-background);
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1022px) {
     .widgets {
         display: none;
     }

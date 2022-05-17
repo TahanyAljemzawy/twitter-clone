@@ -4,6 +4,7 @@ import './Sidebar.css'
 import { Button } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 import {SiTwitter} from 'react-icons/si'
+import { TweetBtnIcon } from './tweetBtnIcon'
 
 function Sidebar() {
 	return (
@@ -22,9 +23,9 @@ function Sidebar() {
 				})}
 				<li>
 		 {/*Tweet Button */}
-				<Button variant="outlined" className="sidebar__tweet" fullWidth>
+				<Button variant="outlined" fullWidth className='sidebar__tweetBtn'>
 					<span className='small_tweetBtn'> Tweet</span>
-					<SiTwitter />
+					<TweetBtnIcon className='tweetBtnIcon'/>
 				 </Button>
 				</li>
 			</ul>
